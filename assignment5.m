@@ -2,8 +2,8 @@
 % these lengths are able to denote a triangle. If so, state the type of the
 % triangle in sense of side lengths. (equilateral-isosceles-scalene)
 
-% defining function IsTriangle 
-function [] = IsTriangle(len)
+% defining function IsTriangle wich takes no input argument
+function [] = IsTriangle()
 
     % Taking the length data and holding it in a vector
     fprintf("Enter three lengths:\n")
