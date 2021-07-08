@@ -1,22 +1,20 @@
-% grafiklerin çizileceği aralığı ve sıklığı oluşturma
+% Defining the interval in which the graph will be plotted
 t = 0:0.2:2*pi;
 
-% grafiğin basılacağı aralığı oluşturma
-xlim([0 2*pi])
-ylim([-1.5 1.5])
-
-% grafiği çizilecek fonksiyonları tanımlama
+%  Identify the functions to be plotted
 e = exp(-t);
 s = sin(t);
 
-% iki grafiği tek plot fonksiyonu ile kareli arka plana çizme
+% Plotting 2 graphs on grid with one plot function
 plot(t,e,"m--*", t,s,"r-o");
 grid;
 
-% grafik başlığı, x etiketi ve y etiketi oluşturma
+% Stating the intervals of axises
+xlim([0 2*pi]);
+ylim([-1.5 1.5]);
+
+%Title of graph, x label ve y label oluşturma
 title("Grafik Penceresi");
 xlabel("x ekseni");
 ylabel("y ekseni");
-
-% tepe noktası ifadesini yazdırma
-text(2,1,"tepe noktası")
+text(2,1,"tepe noktası");  % Printing out “tepe noktası” at the wanted point
