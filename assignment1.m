@@ -1,39 +1,39 @@
-temp = [10 19; 11 22; 12 20; 13 21]; % orijinal matris
-time = temp(:,1);    % zaman matrisi
-tempretures = temp(:,2); % sıcaklık matrisi
-allsorted = zeros(4,2); % zamanlarıyla birlikte sıralanan sıcaklık verilerini tutmak için matris
+temp = [10 19; 11 22; 12 20; 13 21]; % Original matrix
+time = temp(:,1);    % Time matrix
+temperatures = temp(:,2); % Temperature matrix
+allsorted = zeros(4,2); % Matrix created to hold time and temperatures 
 
-temp_max = max(tempretures);  % en yüksek sıcaklığı tutan değişken
+temp_max = max(temperatures);  % The variable saves the maximum temperature value
 
-ascending = (sort(tempretures))'; % sıcaktan soğuğa sıralar ve satır haline getirir
-descending = (sort(tempretures, 'descend'))'; % soğuktan sıcağa doğru sıralar ve satır haline getirir
+ascending = (sort(temperatures))'; % Sorts the temperatures in ascending order and creates a %horizontal vector out of it
+descending = (sort(temperatures, 'descend'))'; % Sorts the temperatures in descending order %and creates a horizontal vector out of it
 
 % size(temp(:,1)) is the number of rows
-for n=1:size(temp(:,1)) % en yüksek sıcaklığın olduğu zamanı bulan döngü
+for n=1:size(temp(:,1)) % The loop contains max temperature
     if temp(n,2) == temp_max
         time_max = temp(n,1);
     end
 end
 
-for m=1:size(temp(:,1))   % zamanları da sıcaklığa göre sıralayan döngü
+for m=1:size(temp(:,1))   % The loop that sorts the times due to temperatures
     for n=1:size(temp(:,1))
        if temp(n,2) == descending(m)
            allsorted(m,:) = temp(n,:);
-           break    % exits loop when assignment is done
+           break    % Exits loop when assignment is done
        end
     end
 end
 
-% istenen veriler ekrana yazılır
-fprintf("Here is the original time-tempreture matrix: \n")
+% Printing out the wanted values
+fprintf("Here is the original time-temperature matrix: \n")
 disp(temp(1:4,:))
 
-fprintf("Max tempreture measured is: %g\n\n", temp_max)
+fprintf("Max temperature measured is: %g\n\n", temp_max)
 
-fprintf("Tempretures sorted from coldest to the highest: \n")
+fprintf("Temperatures sorted from coldest to the highest: \n")
 disp(ascending)
 
-fprintf("\nMax tempreture is measured at interval %g.\n\n", time_max)
+fprintf("\nMax temperature is measured at interval %g.\n\n", time_max)
 
-fprintf("Sorted tempretures along their times: \n")
-disp(allsorted)
+fprintf("Sorted temperatures along their times: \n")
+disp(allsorted);
