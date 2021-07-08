@@ -2,8 +2,8 @@
 % outputs another array s in which the elements in x are sorted using
 % sledgehammer sorting.
 
-% defining the function SledgeHammerSort()
-function[s] = SledgeHammerSort(x)
+% Defining the function sledgesort()
+function[s] = sledgesort(x)
 
     size_of_x = size(x);     % size of array x, vector: [rows, columns]
     rows = size_of_x(1);     % number of rows in array x 
