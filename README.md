@@ -1,1 +1,1 @@
-# Kontrol-Sistemleri-Laboratuvarı-Grup-1-Exercises
+# Kontrol-Sistemleri-Laboratuvarı-Çalışma-Grubu_Repository
