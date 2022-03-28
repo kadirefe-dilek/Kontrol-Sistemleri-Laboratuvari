@@ -140,6 +140,6 @@ end
 u=[u ui];   % ui output
 y = [y yi]; % yi input
 
-if count == num*h/freq - 1
+if count == num/(h*freq) - 1
     finished = 1;
 end
